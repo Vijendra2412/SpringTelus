@@ -1,0 +1,159 @@
+
+<beans
+        xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd"
+>
+
+
+
+
+<!-- beans are basically object which are managed by spring framework-->
+
+<!--1.-->
+    <!--
+<bean id = "alien"  class = "org.vjcoder.Alien"></bean>
+
+    <bean id = "lap" class="org.vjcoder.Laptop"></bean>
+    -->
+
+<!--    2   -->
+    <!--
+      <bean id = "alien1"  class = "org.vjcoder.Alien"></bean>
+      <bean id = "alien2"  class = "org.vjcoder.Alien"></bean>
+
+      <bean id = "lap"  class = "org.vjcoder.Laptop"></bean>
+
+    -->
+
+
+    <!--    3   -->
+<!--
+      <bean id = "alien1"  class = "org.vjcoder.Alien"></bean>
+
+      <bean id = "lap"  class = "org.vjcoder.Laptop"></bean>
+-->
+
+      <!--    4  -->
+<!--
+            <bean id = "alien1"  class = "org.vjcoder.Alien" scope="prototype"></bean>
+
+            <bean id = "lap"  class = "org.vjcoder.Laptop"></bean>
+-->
+        <!--   6.2    -->
+<!--
+    <bean id = "alien1"  class = "org.vjcoder.Alien" >
+        <property name="age" value="21"></property>
+    </bean>
+
+    <bean id = "lap"  class = "org.vjcoder.Laptop"></bean>
+ -->
+
+    <!--   6.3   -->
+<!--
+    <bean id = "alien1"  class = "org.vjcoder.Alien" >
+        <property name="age" value="21"></property>
+
+    </bean>
+
+    <bean id = "lap"  class = "org.vjcoder.Laptop"></bean>
+-->
+
+    <!--   7 ref Attribute   -->
+<!--
+    <bean id = "alien1"  class = "org.vjcoder.Alien" >
+        <property name="age" value="21"></property>
+        <property name="lap" ref="lap"></property>
+    </bean>
+
+    <bean id = "lap"  class = "org.vjcoder.Laptop"></bean>
+
+    <bean id = "lap1"  class = "org.vjcoder.Laptop"></bean>
+-->
+
+    <!--   8 Constructor Injection   -->
+    <!--
+    <bean id = "alien1"  class = "org.vjcoder.Alien" >
+        <constructor-arg value="21"/>
+        <property name="lap" ref="lap"/>
+    </bean>
+
+    <bean id = "lap"  class = "org.vjcoder.Laptop"></bean>
+
+    <bean id = "lap1"  class = "org.vjcoder.Laptop"></bean>
+-->
+
+
+    <!--   8.1 Constructor Injection   -->
+<!--
+    <bean id = "alien1"  class = "org.vjcoder.Alien" >
+        <constructor-arg value="21"/>
+        <constructor-arg ref="lap" />
+    </bean>
+
+    <bean id = "lap"  class = "org.vjcoder.Laptop"></bean>
+
+    <bean id = "lap1"  class = "org.vjcoder.Laptop"></bean>
+ -->
+
+    <!--   8.2 Constructor Injection   -->
+    <!--  after exchanging the value , Out put will be Error   -->
+<!--
+    <bean id = "alien1"  class = "org.vjcoder.Alien" >
+        <constructor-arg ref="lap" />
+        <constructor-arg value="21"/>
+
+    </bean>
+
+    <bean id = "lap"  class = "org.vjcoder.Laptop"></bean>
+
+    <bean id = "lap1"  class = "org.vjcoder.Laptop"></bean>
+-->
+
+    <!--   8.3 Constructor Injection   -->
+<!--    its work both variable different type   -->
+<!--
+    <bean id = "alien1"  class = "org.vjcoder.Alien" >
+
+        <constructor-arg type="org.vjcoder.Laptop" ref="lap" />
+        <constructor-arg type="int" value="21"/>
+
+    </bean>
+
+    <bean id = "lap"  class = "org.vjcoder.Laptop"></bean>
+
+    <bean id = "lap1"  class = "org.vjcoder.Laptop"></bean>
+
+</beans>
+-->
+
+    <!--   8.4 Constructor Injection   -->
+<!--    for different type variable-->
+<!--
+    <bean id = "alien1"  class = "org.vjcoder.Alien" >
+
+        <constructor-arg index="1" ref="lap" />
+        <constructor-arg index="0" value="21" />
+
+
+    </bean>
+
+    <bean id = "lap"  class = "org.vjcoder.Laptop"></bean>
+
+    <bean id = "lap1"  class = "org.vjcoder.Laptop"></bean>
+
+</beans>
+ -->
+
+
+<!--    Autowiring -->
+
+    <bean id = "alien1"  class = "org.vjcoder.Alien" >
+
+        <property name="age" value="21"/>
+
+
+    </bean>
+        </beans>
+
